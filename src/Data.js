@@ -1,4 +1,4 @@
-const data = [
+const categories = [
     {
         id : 1,
         category: "Cheese"
@@ -43,7 +43,47 @@ const data = [
         id: 11,
         category: "Bread"
     },
+    {
+        id: 12,
+        category: "Sandwich"
+    },
+    {
+        id: 13,
+        category: "Sausage"
+    },
+    {
+        id: 14,
+        category: "Hamburger"
+    },
+    {
+        id: 15,
+        category: "Bread"
+    },
+    {
+        id: 16,
+        category: "Hamburger"
+    },
+    {
+        id: 17,
+        category: "Bread"
+    },
+    {
+        id: 18,
+        category: "Sandwich"
+    },
+    {
+        id: 19,
+        category: "Sausage"
+    },
+    {
+        id: 20,
+        category: "Hamburger"
+    },
+    {
+        id: 21,
+        category: "Bread"
+    },
     
 ]
 
-export default data;
+export default categories;

@@ -1,14 +1,21 @@
 import React from 'react'
-import {useGlobalContext} from '../context'
-
+import { useGlobalContext } from '../context'
+import { Link } from 'react-router-dom'
 const NotFound = () => {
 
-    const {resetApp} = useGlobalContext();
+    const { toggleSearch } = useGlobalContext();
 
     return (
-        <section>
-            <h1>Not Found Try Again </h1>
-            <button onClick={resetApp}>Return</button>
+        <section className="not-found">
+            <div className="not-found-content">
+                <h1>Not Result Matchs !!! </h1>
+                <Link to="/">
+                    <button
+                        className="try-again"
+                        onClick={toggleSearch
+                        }>Try Again</button>
+                </Link>
+            </div>
         </section>
     )
 }

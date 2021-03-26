@@ -1,12 +1,19 @@
 import React from 'react'
+//import { useGlobalContext } from './context';
 import Main from './pages/Main'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Ingredients from './pages/Ingredients';
-import Nutrition from './pages/Nutrition';
+import Content from './pages/Content';
+
+import Ingredients from './pages/sub-pages/Ingredients';
+import Nutrition from './pages/sub-pages/Nutrition';
 
 
 
 function App() {
+
+  // const {page} = useGlobalContext();
+
+  // console.log(page);
 
   return (
     <Router>
@@ -14,10 +21,13 @@ function App() {
         <Route exact path="/">
           <Main />
         </Route>
-        <Route path="/ingredient">
+        <Route exact path="/category">
+          <Content />
+        </Route>
+        <Route path="/category/ingredient">
           <Ingredients />
         </Route>
-        <Route path="/nutrition">
+        <Route path="/category/nutrition">
           <Nutrition />
         </Route>
       </Switch>

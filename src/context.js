@@ -5,7 +5,6 @@ const AppContent = React.createContext();
 let currentFood = JSON.parse(localStorage.getItem('food')) || [];
 let currentIngre = JSON.parse(localStorage.getItem('ingri')) || [];
 
-
 const AppProvider = ({ children }) => {
 
     const [category, setCategory] = useState("");
@@ -27,13 +26,17 @@ const AppProvider = ({ children }) => {
         setFood(info.hits);
         setLoading(false);
 
-        localStorage.setItem('food', JSON.stringify(info.hits));
     }
 
-    // console.log(food);
 
     useEffect(() => {
+        localStorage.setItem('ingri', JSON.stringify(ingre));
+        localStorage.setItem('food', JSON.stringify(food));
+    }, [food, ingre]);
 
+
+
+    useEffect(() => {
         if (category.length > 0) {
             fetchData();
         }
@@ -68,7 +71,6 @@ const AppProvider = ({ children }) => {
 
     function getIngredients(target) {
         setIngre(target);
-        localStorage.setItem('ingri', JSON.stringify(target));
     }
 
     return (

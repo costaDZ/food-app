@@ -1,0 +1,86 @@
+/*========================*/
+/* ingrediens page */
+/*========================*/
+.ingredients-container h3 {
+    text-align: center;
+    height: 4em;
+    line-height: 4;
+    color: var(--clr-grey-1);
+}
+
+.title-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em 0;
+    margin-bottom: 2em;
+}
+
+.general-info {
+    list-style: none;
+    line-height: 2;
+}
+
+#calories {
+    background: #008200;
+    border-radius: 50px;
+    font-weight: 700px;
+    font-weight: 700;
+    color: white;
+    padding: 2px 15px;
+}
+#contry {
+    background: #054d85;
+    border-radius: 50px;
+    font-weight: 700px;
+    font-weight: 700;
+    color: white;
+    padding: 2px 15px;
+}
+#quality {
+    background: var(--clr-red-1);
+    border-radius: 50px;
+    font-weight: 700px;
+    font-weight: 700;
+    color: white;
+    padding: 2px 15px;
+}
+
+.title-section img {
+    border-radius: 50%;
+    box-shadow: 9px 9px 40px #3c3636;
+}
+
+table {
+    margin: auto;
+    width: 90%;
+}
+
+table th {
+    background: var(--clr-red-1);
+    color: white;
+    height: 2em;
+}
+
+table td {
+    height: 3em;
+}
+
+tbody tr:nth-child(2n) {
+    background: #d2ffd2;
+}
+tbody tr:nth-child(0n) {
+    background: #ff9463;
+}
+
+.nut-tables {
+    display: flex;
+    height: 100vh;
+    width: 90%;
+    margin: auto;
+}
+
+.nut-table-one,
+.nut-table-two {
+    border: 2px solid black;
+}

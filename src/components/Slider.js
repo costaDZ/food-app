@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/slider.css';
 import categories from '../Data';
 import { FaFacebook, FaGithub, FaGooglePlus, FaTimes } from "react-icons/fa";
 import { useGlobalContext } from '../context';
@@ -15,7 +16,7 @@ function Slider() {
             <div className="slider-logo">
                 <img src={require("../food-img/logo white final.png")} alt="logo" />
             </div>
-            <h2>Categories :</h2>
+            <h2>Main Categories :</h2>
 
             <div className="slider-categories">
                 {

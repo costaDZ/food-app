@@ -1,6 +1,8 @@
 import React from 'react'
-import { useGlobalContext } from '../../context';
-import Navbar from '../../components/Navbar'
+import '../styles/ingerediens.css'
+import { useGlobalContext } from '../context';
+import Navbar from '../components/Navbar'
+
 
 function Nutrition() {
 

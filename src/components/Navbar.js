@@ -1,8 +1,9 @@
 import React from 'react'
+import '../styles/navbar.css';
 import { useGlobalContext } from '../context'
 import { GoThreeBars, GoHeart, GoHome } from "react-icons/go";
 import { FaFacebook, FaGithub, FaGooglePlus, FaSistrix } from "react-icons/fa";
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Slider from './Slider';
 import SearchField from './SearchField';
 
@@ -11,40 +12,40 @@ function Search() {
 
     const { toggleSlider, toggleSearch, closeSidebar } = useGlobalContext();
 
-   // const [search, setSearch] = useState("");
+    // const [search, setSearch] = useState("");
 
     return (
         <>
-        <nav className="navbar" onClick={closeSidebar}>
-            <section className="slider-section">
-                <button className="slider-btn" onClick={toggleSlider}><GoThreeBars viewBox="0 0 16 13" /></button>
-                <ul className="log-list">
-                    <li><a href="/"><GoHeart viewBox="0 0 16 10" /></a></li>
-                    <li><a href="/">Sign-up</a></li>
-                    <li><a href="/">Login</a></li>
-                    <li><a href="/"><GoHome viewBox="0 0 16 14" /></a></li>
-                </ul>
-            </section>
+            <nav className="navbar" onClick={closeSidebar}>
+                <section className="slider-section">
+                    <button className="slider-btn" onClick={toggleSlider}><GoThreeBars viewBox="0 0 16 13" /></button>
+                    <ul className="log-list">
+                        <li><a href="/"><GoHeart viewBox="0 0 16 10" /></a></li>
+                        <li><a href="/">Sign-up</a></li>
+                        <li><a href="/">Login</a></li>
+                        <li><a href="/"><GoHome viewBox="0 0 16 14" /></a></li>
+                    </ul>
+                </section>
 
-            <Link to="/" className="logo"> 
-                <img
-                    src={require("../food-img/logo.png")}
-                    alt="logo"
-                    className="logo-img" />
-            </Link>
+                <Link to="/" className="logo">
+                    <img
+                        src={require("../food-img/logo.png")}
+                        alt="logo"
+                        className="logo-img" />
+                </Link>
 
-            <section className="follow-section">
-                <ul className="follow-icones">
-                    <h4>Follow :</h4>
-                    <li><a href="/"><FaFacebook viewBox="0 0 496 480" /></a></li>
-                    <li><a href="/"><FaGithub viewBox="0 0 496 480" /></a></li>
-                    <li><a href="/"><FaGooglePlus viewBox="0 0 496 480" /></a></li>
-                </ul>
-                <button className="search-btn" onClick={toggleSearch}>
-                    <FaSistrix /> Search
+                <section className="follow-section">
+                    <ul className="follow-icones">
+                        <h4>Follow :</h4>
+                        <li><a href="/"><FaFacebook viewBox="0 0 496 480" /></a></li>
+                        <li><a href="/"><FaGithub viewBox="0 0 496 480" /></a></li>
+                        <li><a href="/"><FaGooglePlus viewBox="0 0 496 480" /></a></li>
+                    </ul>
+                    <button className="search-btn" onClick={toggleSearch}>
+                        <FaSistrix /> Search
                 </button>
-            </section>
-            {/* <form className="search-form" onSubmit={(e) => handelSubmit(e, search)}>
+                </section>
+                {/* <form className="search-form" onSubmit={(e) => handelSubmit(e, search)}>
                 <label htmlFor="item">Search Your Favorit Food :</label>
                 <input
                     id="item"
@@ -54,9 +55,9 @@ function Search() {
                     className="input-field" />
                 <button type="submit" className="sub-btn">Search</button>
             </form> */}
-        </nav>
-        <Slider />
-        <SearchField />
+            </nav>
+            <Slider />
+            <SearchField />
         </>
     )
 

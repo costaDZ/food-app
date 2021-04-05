@@ -1,0 +1,64 @@
+/*========================*/
+/* search field */
+/*========================*/
+
+.search-field {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 3;
+    background: #fffffff5;
+}
+
+.search-form {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-form input {
+    font-size: 3em;
+    border: none;
+    border-bottom: 2px solid #8a8787;
+    font-weight: 700;
+    color: #000000;
+    background: transparent;
+    padding-left: 1em;
+    outline: none;
+}
+
+.cls-search-field {
+    font-size: 2em;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 8em;
+    top: 3em;
+    color: grey;
+}
+
+.search-field-btn {
+    font-size: 2.7em;
+    position: absolute;
+    top: 0.3em;
+    background: transparent;
+    border: none;
+    right: 2em;
+    color: grey;
+}
+
+.search-field-btn:hover {
+    color: var(--clr-black);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.cls-search-field:hover {
+    color: var(--clr-red-1);
+    transition: var(--transition);
+    cursor: pointer;
+}

@@ -1,47 +1,43 @@
 import React, { useState } from 'react'
+import '../styles/searchField.css'
 import { useGlobalContext } from '../context'
 import { FaTimes, FaSistrix } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 
 
 function SearchField() {
 
-
+    let history = useHistory();
     const [inputValue, setInputValue] = useState("")
-    const { toggleSearch, showSearch, getCategory} = useGlobalContext();
+    const { toggleSearch, showSearch, getCategory } = useGlobalContext();
 
 
 
-    function handelSubmit(e, value) {
+    function handelSubmit(e) {
         e.preventDefault();
-        // if (window.location.href.slice(-9) !== "/category") {
-        //     window.location.href = "/category"
-        // }
-        // setShowSearch(!showSearch);
-        // getCategory(value);
+        getCategory(inputValue, "toggle");
+        console.log(inputValue);
+        history.push('/category');
     }
 
 
     return (
 
         <section className="search-field " style={{ display: `${showSearch ? "block" : "none"}` }}>
-            <button className="cls-search-field" onClick={() => toggleSearch}><FaTimes /></button>
-            <form className="search-form" onSubmit={(e) => handelSubmit(e, inputValue)}>
+            <button className="cls-search-field" onClick={toggleSearch}><FaTimes /></button>
+            <form className="search-form" onSubmit={(e) => handelSubmit(e)}>
                 <input
                     type="text"
                     onChange={e => setInputValue(e.target.value)}
                     value={inputValue}
                     placeholder="Search"
                 ></input>
-                <Link to="/category"
-                    onClick={() => getCategory(inputValue, "toggle")}
+                <button
                     className="search-field-btn"
                     type="submit">
-
                     <FaSistrix />
-                </Link>
-
+                </button>
             </form >
         </section >
     )

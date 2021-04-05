@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/notFound.css'
 import { useGlobalContext } from '../context'
 import { Link } from 'react-router-dom'
 const NotFound = () => {

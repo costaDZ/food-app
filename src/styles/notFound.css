@@ -1,0 +1,30 @@
+/*========================*/
+/* Not found section */
+/*========================*/
+.not-found {
+    height: 100vh;
+}
+
+.not-found-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: gray;
+}
+
+.try-again {
+    width: 80%;
+    font-size: 1.5em;
+    font-size: 1;
+    height: 2em;
+    margin: 1em;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.try-again:hover {
+    color: white;
+    background-color: var(--clr-red-1);
+}

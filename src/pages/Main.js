@@ -3,10 +3,11 @@ import Loading from '../components/Loading'
 // import NotFound from '../components/NotFound'
 import Navbar from '../components/Navbar'
 import Overlay from '../components/Overlay'
-import {useGlobalContext} from '../context'
+import { useGlobalContext } from '../context'
 
 function Main() {
-    const {loading} = useGlobalContext()
+    const { loading } = useGlobalContext();
+
 
     if (loading) {
         return <Loading />

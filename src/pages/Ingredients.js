@@ -1,6 +1,7 @@
 import React from 'react'
-import Navbar from '../../components/Navbar'
-import { useGlobalContext } from '../../context';
+import '../styles/ingerediens.css'
+import Navbar from '../components/Navbar'
+import { useGlobalContext } from '../context';
 
 
 const Ingredients = () => {
@@ -12,7 +13,7 @@ const Ingredients = () => {
 
     return (
         <>
-        <Navbar />
+            <Navbar />
             <section className="ingredients-container">
                 <div className="title-section">
                     <ul className="general-info">
@@ -23,9 +24,9 @@ const Ingredients = () => {
                     </ul>
                     <img src={ingre.image} alt={ingre.label} />
                 </div>
-               
 
-                
+
+
                 <table>
                     <thead>
                         <tr>

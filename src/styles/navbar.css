@@ -1,0 +1,125 @@
+/*========================*/
+/* NavBar */
+/*========================*/
+
+.navbar {
+    border-bottom: 1px solid var(--clr-grey-1);
+}
+
+.navbar,
+.slider-section,
+.log-list,
+.follow-icones,
+.follow-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+.navbar ul {
+    list-style: none;
+    color: var(--clr-grey-1);
+}
+.navbar a {
+    color: var(--clr-grey-1);
+    font-weight: 700;
+    text-decoration: none;
+}
+.slider-section,
+.follow-section {
+    margin: 0 1em;
+    width: 30%;
+}
+.log-list,
+.follow-icones {
+    flex: 1;
+    margin: 0 1em;
+}
+
+.logo-img {
+    height: 2em;
+}
+
+.follow-icones a {
+    color: var(--clr-red-1);
+}
+
+.slider-btn {
+    color: var(--clr-grey-1);
+    font-size: 1.5em;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search-btn {
+    color: var(--clr-grey-1);
+    font-weight: 700;
+    font-size: 1em;
+    width: 7em;
+    background: transparent;
+    border: none;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.navbar ul li:hover,
+.navbar a:hover,
+.search-btn:hover,
+.slider-btn:hover {
+    transition: var(--transition);
+    color: var(--clr-black);
+}
+
+/*========================*/
+/* overrlay */
+/*========================*/
+
+.overlay {
+    background: url(../food-img/backgrounds/4.jpg) center/cover no-repeat;
+    height: 90vh;
+    position: relative;
+}
+
+.overlay-content {
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.overlay-content h1 {
+    font-size: 4em;
+    color: white;
+}
+
+.overlay-form {
+    width: 80%;
+    font-size: 2.5em;
+    line-height: 1.6;
+    height: 2em;
+    margin: auto;
+    border: none;
+    cursor: pointer;
+    background: #ffffffb0;
+    transition: var(--transition);
+    color: gray;
+}
+
+.overlay-form svg {
+    position: relative;
+    top: 15px;
+}
+
+.overlay-form h3 {
+    font-style: italic;
+}
+
+.overlay-form:hover {
+    color: var(--clr-black);
+    background-color: white;
+}

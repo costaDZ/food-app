@@ -4,8 +4,8 @@ import Main from './pages/Main'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Content from './pages/Content';
 
-import Ingredients from './pages/sub-pages/Ingredients';
-import Nutrition from './pages/sub-pages/Nutrition';
+import Ingredients from './pages/Ingredients';
+import Nutrition from './pages/Nutrition';
 
 
 
@@ -21,13 +21,13 @@ function App() {
         <Route exact path="/">
           <Main />
         </Route>
-        <Route exact path="/category">
+        <Route path="/category">
           <Content />
         </Route>
-        <Route path="/category/ingredient">
+        <Route path="/ingredient">
           <Ingredients />
         </Route>
-        <Route path="/category/nutrition">
+        <Route path="/nutrition">
           <Nutrition />
         </Route>
       </Switch>

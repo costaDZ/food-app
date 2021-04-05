@@ -2,8 +2,8 @@ import React, { useState, useEffect, useContext } from 'react'
 
 const AppContent = React.createContext();
 
-let currentFood = JSON.parse(localStorage.getItem('food'));
-let currentIngre = JSON.parse(localStorage.getItem('ingri'));
+let currentFood = JSON.parse(localStorage.getItem('food')) || [];
+let currentIngre = JSON.parse(localStorage.getItem('ingri')) || [];
 
 
 const AppProvider = ({ children }) => {

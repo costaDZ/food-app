@@ -23,11 +23,9 @@ function Slider() {
                     categories.map(item => {
                         const { id, category } = item;
                         return (
-                            <button key={id}>
-                                <Link to="/category" onClick={() => getCategory(category)}>
-                                    {category}
-                                </Link>
-                            </button>
+                            <Link to="/category" key={id} onClick={() => getCategory(category)}>
+                                {category}
+                            </Link>
                         )
                     })
                 }

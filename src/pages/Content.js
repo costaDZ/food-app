@@ -1,12 +1,16 @@
 import React, { useEffect } from 'react'
 import Navbar from '../components/Navbar'
-import Slider from '../components/Slider'
-import SearchField from '../components/SearchField'
+import '../styles/categories.css';
+
+// import Slider from '../components/Slider'
+// import SearchField from '../components/SearchField'
 import { Link, useHistory } from 'react-router-dom'
 
 import { useGlobalContext } from '../context';
 import NotFound from '../components/NotFound'
 import Loading from '../components/Loading'
+
+
 
 
 

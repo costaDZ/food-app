@@ -12,7 +12,7 @@
 .follow-icones,
 .follow-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     height: 10vh;
 }
@@ -33,7 +33,6 @@
 .log-list,
 .follow-icones {
     flex: 1;
-    margin: 0 1em;
 }
 
 .logo-img {
@@ -73,6 +72,34 @@
     color: var(--clr-black);
 }
 
+@media (max-width: 1100px) {
+    .follow-icones {
+        display: none;
+    }
+    .log-list {
+        display: none;
+    }
+    .log-list:first-child {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-section,
+    .follow-section {
+        margin: 0;
+    }
+}
+
+@media (max-width: 376px) {
+    .logo-img {
+        height: 1em;
+    }
+    .search-btn {
+        font-size: 0.8em;
+    }
+}
+
 /*========================*/
 /* overrlay */
 /*========================*/
@@ -95,6 +122,9 @@
 .overlay-content h1 {
     font-size: 4em;
     color: white;
+    width: 60vw;
+    letter-spacing: 0.15em;
+    text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a;
 }
 
 .overlay-form {
@@ -122,4 +152,27 @@
 .overlay-form:hover {
     color: var(--clr-black);
     background-color: white;
+}
+
+@media (max-width: 1100px) {
+    .overlay-content h1 {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 768px) {
+    .overlay-content h1 {
+        font-size: 12vw;
+    }
+
+    .overlay-form {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 376px) {
+    .overlay-form {
+        width: 90vw;
+        font-size: 1.8em;
+    }
 }

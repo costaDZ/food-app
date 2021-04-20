@@ -8,7 +8,7 @@
     z-index: 1;
     background: #333333;
     height: 100vh;
-    width: 28vw;
+    width: 17em;
     transform: translateX(-100%);
     transition: var(--transition);
     text-align: center;
@@ -27,6 +27,7 @@
 .slider h2 {
     font-size: 1em;
     color: white;
+    text-decoration: underline;
 }
 
 .slider-icons {
@@ -69,16 +70,23 @@
     margin: 0 auto;
 }
 
-.slider-categories button a {
+.slider-categories a {
     color: white;
     text-decoration: none;
-    font-size: 1.4em;
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.slider-categories button:hover {
+.slider-categories a:hover {
     background-color: var(--clr-red-1);
     transition: var(--transition);
     cursor: pointer;
+}
+
+.social-icons {
+    margin-top: 2em;
 }
 
 .close-slider svg:hover {
@@ -92,4 +100,16 @@
 
 .toogle-slider {
     transform: translateX(0%);
+}
+
+@media (max-width: 1100px) {
+    /* .slider {
+        width: 35vw;
+    } */
+}
+
+@media (max-width: 376px) {
+    .slider {
+        width: 100vw;
+    }
 }

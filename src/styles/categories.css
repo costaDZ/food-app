@@ -1,12 +1,15 @@
 /*========================*/
 /* Ctagories */
 /*========================*/
+.content-page {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
 
 .content-page > h2 {
     text-align: center;
     height: 4em;
     line-height: 4;
-    color: var(--clr-grey-1);
+    color: white;
 }
 
 .content-items {
@@ -14,8 +17,8 @@
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
     padding: 1em;
-    grid-gap: 0.3em;
-    height: 100vh;
+    grid-gap: 2em 0.5em;
+    /* height: 100vh; */
 }
 
 .food-item {
@@ -88,3 +91,40 @@
 .nutrition-btn:hover {
     background-color: #0059ff;
 }
+
+@media (max-width: 992px) {
+    .content-items {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-items {
+        grid-template-columns: repeat(1, 90%);
+        justify-content: center;
+    }
+}
+
+@media (max-width: 376px) {
+    .content-items {
+        grid-template-columns: repeat(1, 100%);
+        padding: 0.5em;
+    }
+
+    .content-page > h2 {
+        font-size: 1em;
+    }
+}
+/* 
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 376px) {
+} */

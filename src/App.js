@@ -4,6 +4,7 @@ import Main from './pages/Main'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Content from './pages/Content';
 
+
 import Ingredients from './pages/Ingredients';
 import Nutrition from './pages/Nutrition';
 

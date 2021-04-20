@@ -36,7 +36,7 @@ function Search() {
 
                 <section className="follow-section">
                     <ul className="follow-icones">
-                        <h4>Follow :</h4>
+                        <h4>Follow</h4>
                         <li><a href="/"><FaFacebook viewBox="0 0 496 480" /></a></li>
                         <li><a href="/"><FaGithub viewBox="0 0 496 480" /></a></li>
                         <li><a href="/"><FaGooglePlus viewBox="0 0 496 480" /></a></li>

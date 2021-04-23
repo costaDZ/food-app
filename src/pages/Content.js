@@ -41,7 +41,7 @@ function Content() {
             <Navbar />
             <section className="content-page" onClick={closeSidebar}>
                 {
-                    page.length > 0 ? <h2>Search Result : "{`${page}`}"</h2> : <h2>Descover Best Recipies In The World</h2>
+                    page.length > 0 ? <h2>Matching Result for : "{`${page}`}"</h2> : <h2>Discover Best Recipies In The World</h2>
                 }
                 <div className="content-items">
                     {

@@ -2,7 +2,7 @@
 /* Ctagories */
 /*========================*/
 .content-page {
-    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    background-image: linear-gradient(to top, var(--clr-red-1) 0%, black 100%);
 }
 
 .content-page > h2 {
@@ -24,9 +24,7 @@
 .food-item {
     position: relative;
     border: 2px solid #d4b5b1;
-    border-radius: 10px;
     width: 100%;
-    box-shadow: 2px 4px 4px #00000073;
     height: 15em;
 }
 .food-item img {

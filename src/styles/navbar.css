@@ -92,11 +92,14 @@
 }
 
 @media (max-width: 376px) {
+    .slider-btn {
+        font-size: 2em;
+    }
     .logo-img {
-        height: 1em;
+        height: 1.5em;
     }
     .search-btn {
-        font-size: 0.8em;
+        font-size: 1em;
     }
 }
 

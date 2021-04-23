@@ -3,7 +3,7 @@
 /*========================*/
 
 .navbar {
-    border-bottom: 1px solid var(--clr-grey-1);
+    border-bottom: 1px solid var(--clr-light-grey);
 }
 
 .navbar,

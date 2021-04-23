@@ -47,11 +47,22 @@ function Content() {
                     {
                         food.map((item, index) => {
                             const { label, image, calories, cuisineType, dietLabels, ingredients, totalDaily, totalNutrients } = item.recipe;
+                            console.log(dietLabels);
                             return (
                                 <section className="food-item" key={index}>
-                                    <img src={image} alt={label} />
+                                    <div className="image">
+                                        <img src={image} alt={label} />
+                                    </div>
+
                                     <div className="description">
-                                        <h2 className="food-title">{label}</h2>
+                                        <h3 className="food-title">{label}</h3>
+                                        <ul className="des-info">
+                                            {cuisineType ? <li><span>Original Contry</span>{` : ${cuisineType[0].toUpperCase()}`}</li> : null}
+                                            {calories ? <li><span>Calories</span> {` :${calories.toFixed(2)} kcal`}</li> : null}
+                                            {dietLabels.length > 0 ? <li><span>Nutrition Quality</span>{` :${dietLabels}`}</li> : null}
+                                        </ul>
+
+
                                         <div className="item-btns">
                                             <Link to="/ingredient">
                                                 <button
@@ -64,7 +75,7 @@ function Content() {
                                             <Link to="/nutrition">
                                                 <button
                                                     className="nutrition-btn"
-                                                    onClick={() => getIngredients({ image, label, totalDaily, totalNutrients })}
+                                                    onClick={() => getIngredients({ image, label, totalDaily, totalNutrients, calories, cuisineType, dietLabels })}
                                                 >Nutrition Info</button>
                                             </Link>
                                         </div>

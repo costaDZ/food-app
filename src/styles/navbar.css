@@ -150,6 +150,7 @@
 
 .overlay-form h3 {
     font-style: italic;
+    letter-spacing: 0.4em;
 }
 
 .overlay-form:hover {

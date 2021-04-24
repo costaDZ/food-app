@@ -16,20 +16,11 @@ const Ingredients = () => {
                 <div className="title-section">
                     <h2>{ingre.label}</h2>
                     <ul className="item-info-section">
-                        {/* <li><span id="calories">Calories</span> {ingre.calories.toFixed(2)}</li>
-                        <li><span id="contry">Origin Contry</span> {`${ingre.cuisineType || "/"}`}</li>
-                        <li><span id="quality">Nutrition Quality</span> {` ${ingre.dietLabels.length > 0 ? ingre.dietLabels : "/"}`}</li> */}
-
                         {ingre.cuisineType ? <li><span>Original Contry</span>{` : ${ingre.cuisineType[0].toUpperCase()}`}</li> : null}
                         {ingre.calories ? <li><span>Calories</span> {` :${ingre.calories.toFixed(2)} kcal`}</li> : null}
                         {ingre.dietLabels.length > 0 ? <li><span>Nutrition Quality</span>{` :${ingre.dietLabels}`}</li> : null}
                     </ul>
-                    {/* <ul className="general-info">
-                        <h3>{ingre.label}</h3>
-                        <li><span id="calories">Calories</span> {ingre.calories.toFixed(2)}</li>
-                        <li><span id="contry">Origin Contry</span> {`${ingre.cuisineType || "/"}`}</li>
-                        <li><span id="quality">Nutrition Quality</span> {` ${ingre.dietLabels.length > 0 ? ingre.dietLabels : "/"}`}</li>
-                    </ul> */}
+
                 </div>
 
                 <figure className="ingr-image">
@@ -64,32 +55,5 @@ const Ingredients = () => {
         </>
     )
 }
-
-
-{/* <table>
-    <thead>
-        <tr>
-            <th>Ingredien</th>
-            <th>Weight</th>
-            <th>Food category</th>
-        </tr>
-    </thead>
-    <tbody className="ingrediens-table">
-                                        {
-                                            ingre.ingredients.map((ingre, index) => {
-                                                const { text, weight, foodCategory } = ingre;
-                                                return (
-                                                    <tr key={index}>
-                                                        <li>{text}</li>
-                                                        <li>{weight}</li>
-                                                        <li>{foodCategory}</li>
-                                                    </tr>
-                                                )
-                                            })
-                                        }
-    </tbody>
-</table> */}
-
-
 
 export default Ingredients

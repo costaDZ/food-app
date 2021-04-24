@@ -1,9 +1,10 @@
 /*========================*/
 /* loading page */
 /*========================*/
-.loading {
+/* .loading {
     height: 100vh;
     width: 100vw;
+    background-image: linear-gradient(to top, var(--clr-red-1) 0%, black 100%);
 }
 
 .loading img {
@@ -11,4 +12,41 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    background-color: transparent;
+    background-color: #ffeeec;
+    border-radius: 25px;
+} */
+
+.loader-container {
+    height: 100vh;
+    width: 100vh;
+    background-image: linear-gradient(to top, var(--clr-red-1) 0%, black 100%);
+}
+
+.preloader-path {
+    stroke-linejoin: round;
+    fill: none;
+    stroke: white;
+    stroke-width: 2;
+    stroke-dasharray: 0 50;
+    -webkit-animation: preloader 1s infinite ease;
+    animation: preloader 1s infinite ease-in forwards;
+}
+.preloader-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes preloader {
+    33% {
+        stroke-dasharray: 40 50;
+    }
+    66% {
+        stroke-dasharray: 80 50;
+    }
+    100% {
+        stroke-dasharray: 100 50;
+    }
 }

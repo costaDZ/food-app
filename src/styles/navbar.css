@@ -4,18 +4,119 @@
 
 .navbar {
     border-bottom: 1px solid var(--clr-light-grey);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 10vh;
+    width: 90%;
+    margin: auto;
+}
+.navbar ul {
+    list-style: none;
+    color: var(--clr-grey-1);
+    font-size: var(--font-normal-size);
 }
 
-.navbar,
-.slider-section,
+.navbar a {
+    font-weight: 700;
+
+    text-decoration: none;
+    color: var(--clr-grey-1);
+    font-size: var(--font-normal-size);
+}
+
+.logo {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+}
+.logo-img {
+    height: 1.5em;
+}
+
+.slider-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1 1 0px;
+}
+.slider-btn {
+    color: var(--clr-grey-1);
+    font-size: 1.2em;
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.log-list {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1 1 0px;
+}
+
+.follow-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1 1 0px;
+}
+
+.follow-icones {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1 1 0px;
+}
+
+.follow-icones svg {
+    font-size: 1.2em;
+    color: var(--clr-red-1);
+}
+.follow-icones li {
+    display: inline-block;
+}
+.follow-icones h4 {
+    font-size: var(--font-normal-size);
+}
+.search-btn {
+    color: var(--clr-grey-1);
+    font-weight: 700;
+    font-size: var(--font-normal-size);
+    background: transparent;
+    border: none;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+}
+
+.navbar ul li:hover,
+.navbar a:hover,
+.search-btn:hover,
+.slider-btn:hover {
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--clr-black);
+}
+
+/* .navbar,
 .log-list,
 .follow-icones,
 .follow-section {
     display: flex;
     justify-content: space-evenly;
+    flex: 1;
     align-items: center;
     height: 10vh;
 }
+
+.slider-section {
+    display: flex;
+    justify-content: space-evenly;
+    flex: 1;
+    padding-left: 1em;
+}
+
 .navbar ul {
     list-style: none;
     color: var(--clr-grey-1);
@@ -24,28 +125,31 @@
     color: var(--clr-grey-1);
     font-weight: 700;
     text-decoration: none;
-}
-.slider-section,
+    font-size: 0.8em;
+} */
+/* .slider-section,
 .follow-section {
     margin: 0 1em;
-    width: 30%;
-}
-.log-list,
+} */
+/* .log-list,
 .follow-icones {
     flex: 1;
 }
 
 .logo-img {
-    height: 2em;
+    height: 1.5em;
 }
 
 .follow-icones a {
     color: var(--clr-red-1);
+    font-size: 1em;
 }
-
+.follow-icones h4 {
+    font-size: var(--font-normal-size);
+}
 .slider-btn {
     color: var(--clr-grey-1);
-    font-size: 1.5em;
+    font-size: 1em;
     outline: none;
     border: none;
     background: transparent;
@@ -55,7 +159,7 @@
 .search-btn {
     color: var(--clr-grey-1);
     font-weight: 700;
-    font-size: 1em;
+    font-size: 0.8em;
     width: 7em;
     background: transparent;
     border: none;
@@ -69,14 +173,18 @@
 .search-btn:hover,
 .slider-btn:hover {
     transition: var(--transition);
-    color: var(--clr-black);
+    color: var(--clr-grey-1);
 }
-
+*/
 @media (max-width: 1100px) {
     .follow-icones {
         display: none;
     }
-    .log-list {
+    .search-btn svg {
+        font-size: 1.3em;
+    }
+    .log-list,
+    .hide-search {
         display: none;
     }
     .log-list:first-child {
@@ -92,15 +200,15 @@
 }
 
 @media (max-width: 376px) {
-    .slider-btn {
+    /* .slider-btn {
         font-size: 2em;
     }
     .logo-img {
         height: 1.5em;
     }
     .search-btn {
-        font-size: 1em;
-    }
+        font-size: 0.8em;
+    } */
 }
 
 /*========================*/
@@ -123,7 +231,7 @@
 }
 
 .overlay-content h1 {
-    font-size: 4em;
+    font-size: 3em;
     color: white;
     width: 60vw;
     letter-spacing: 0.15em;
@@ -131,11 +239,11 @@
 }
 
 .overlay-form {
-    width: 80%;
-    font-size: 2.5em;
+    width: 60%;
+    font-size: 2em;
     line-height: 1.6;
     height: 2em;
-    margin: auto;
+    margin: 1em auto;
     border: none;
     cursor: pointer;
     background: #ffffffb0;

@@ -20,10 +20,10 @@ function Search() {
                 <section className="slider-section">
                     <button className="slider-btn" onClick={toggleSlider}><GoThreeBars viewBox="0 0 16 13" /></button>
                     <ul className="log-list">
-                        <li><a href="/"><GoHeart viewBox="0 0 16 10" /></a></li>
+                        <li><GoHeart viewBox="0 0 16 10" /></li>
                         <li><a href="/">Sign-up</a></li>
                         <li><a href="/">Login</a></li>
-                        <li><a href="/"><GoHome viewBox="0 0 16 14" /></a></li>
+                        <li><GoHome viewBox="0 0 16 14" /></li>
                     </ul>
                 </section>
 
@@ -42,8 +42,8 @@ function Search() {
                         <li><a href="/"><FaGooglePlus viewBox="0 0 496 480" /></a></li>
                     </ul>
                     <button className="search-btn" onClick={toggleSearch}>
-                        <FaSistrix /> Search
-                </button>
+                        <FaSistrix /> <span className="hide-search">Search</span>
+                    </button>
                 </section>
                 {/* <form className="search-form" onSubmit={(e) => handelSubmit(e, search)}>
                 <label htmlFor="item">Search Your Favorit Food :</label>

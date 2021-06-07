@@ -1,8 +1,8 @@
 import React from 'react'
-import '../styles/slider.css';
-import categories from '../Data';
+import './slider.css';
+import categories from '../../../Data';
 import { FaFacebook, FaGithub, FaGooglePlus, FaTimes } from "react-icons/fa";
-import { useGlobalContext } from '../context';
+import { useGlobalContext } from '../../../context';
 import { Link } from 'react-router-dom';
 
 
@@ -14,7 +14,7 @@ function Slider() {
         <section className={showSlider ? "slider toogle-slider" : "slider"}>
             <button className="close-slider" onClick={toggleSlider}><FaTimes /></button>
             <div className="slider-logo">
-                <img src={require("../food-img/logo white final.png")} alt="logo" />
+                <img src={require("../../../food-img/logo white final.png")} alt="logo" />
             </div>
             <h2>Main Categories :</h2>
 

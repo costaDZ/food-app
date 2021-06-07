@@ -1,10 +1,13 @@
 import React from 'react'
-import '../styles/ingerediens.css'
-import { useGlobalContext } from '../context';
-import Navbar from '../components/Navbar'
+import './ingerediens.css'
+
+import { Navbar } from '../../components';
 
 
-function Nutrition() {
+import { useGlobalContext } from '../../context';
+
+
+export function Ingredients() {
 
     const { ingre } = useGlobalContext();
 
@@ -20,23 +23,30 @@ function Nutrition() {
                         {ingre.calories ? <li><span>Calories</span> {` :${ingre.calories.toFixed(2)} kcal`}</li> : null}
                         {ingre.dietLabels.length > 0 ? <li><span>Nutrition Quality</span>{` :${ingre.dietLabels}`}</li> : null}
                     </ul>
+
                 </div>
 
                 <figure className="ingr-image">
                     <img src={ingre.image} alt={ingre.label} />
                     <figcaption>{ingre.label}</figcaption>
                 </figure>
+
                 <section className="ingredients">
-                    <h2 className="yield" style={{ fontSize: "1.5em" }}>NUTRITION INFO :</h2>
+                    <p className="yield"><strong>YIELD :</strong> {`${ingre.ingredients.length}`} servings</p>
+
+                    <h2>INGREDIENTS</h2>
+
+
                     <ul className="ingrediens-list">
                         {
-                            Object.values(ingre.totalNutrients).map((item, index) => {
-                                const { label, quantity, unit } = item;
+                            ingre.ingredients.map((ingre, index) => {
+                                const { text, weight, foodCategory } = ingre;
                                 return (
-                                    <li key={index}>
-                                        <ul className="ingrediens-line">
-                                            <li>{label}</li>
-                                            <li id="weight">{quantity.toFixed(2)}{unit}</li>
+                                    <li key={index} >
+                                        < ul className="ingrediens-line">
+                                            <li>{text}</li>
+                                            <li id="weight">{weight.toFixed(2)} g</li>
+                                            <li id="cat">{foodCategory}</li>
                                         </ul>
                                     </li>
                                 )
@@ -48,5 +58,3 @@ function Nutrition() {
         </>
     )
 }
-export default Nutrition;
-

@@ -1,8 +1,10 @@
-import React from 'react'
-import '../styles/notFound.css'
-import { useGlobalContext } from '../context'
-import { Link } from 'react-router-dom'
-const NotFound = () => {
+import React from 'react';
+import './notFound.css';
+import { useGlobalContext } from '../../context';
+import { Link } from 'react-router-dom';
+
+
+export function NotFound() {
 
     const { toggleSearch } = useGlobalContext();
 
@@ -21,4 +23,3 @@ const NotFound = () => {
     )
 }
 
-export default NotFound

@@ -1,12 +1,6 @@
 import React from 'react'
-//import { useGlobalContext } from './context';
-import Main from './pages/Main'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Content from './pages/Content';
-
-
-import Ingredients from './pages/Ingredients';
-import Nutrition from './pages/Nutrition';
+import { Content, Ingredients, Nutrition, Main } from './pages';
 
 
 
@@ -29,8 +23,8 @@ function App() {
         </Route>
       </Switch>
     </Router>
-
   )
+
 }
 
-export default App
+export default App;

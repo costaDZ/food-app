@@ -3,6 +3,7 @@
 /*========================*/
 .content-page {
     background-image: linear-gradient(to top, var(--clr-red-1) 0%, black 100%);
+    min-height: 90vh;
 }
 
 .content-page > h2 {

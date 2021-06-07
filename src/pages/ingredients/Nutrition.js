@@ -1,10 +1,10 @@
 import React from 'react'
-import '../styles/ingerediens.css'
-import Navbar from '../components/Navbar'
-import { useGlobalContext } from '../context';
+import './ingerediens.css';
+import { useGlobalContext } from '../../context';
 
+import { Navbar } from '../../components';
 
-const Ingredients = () => {
+export function Nutrition() {
 
     const { ingre } = useGlobalContext();
 
@@ -20,30 +20,23 @@ const Ingredients = () => {
                         {ingre.calories ? <li><span>Calories</span> {` :${ingre.calories.toFixed(2)} kcal`}</li> : null}
                         {ingre.dietLabels.length > 0 ? <li><span>Nutrition Quality</span>{` :${ingre.dietLabels}`}</li> : null}
                     </ul>
-
                 </div>
 
                 <figure className="ingr-image">
                     <img src={ingre.image} alt={ingre.label} />
                     <figcaption>{ingre.label}</figcaption>
                 </figure>
-
                 <section className="ingredients">
-                    <p className="yield"><strong>YIELD :</strong> {`${ingre.ingredients.length}`} servings</p>
-
-                    <h2>INGREDIENTS</h2>
-
-
+                    <h2 className="yield" style={{ fontSize: "1.5em" }}>NUTRITION INFO :</h2>
                     <ul className="ingrediens-list">
                         {
-                            ingre.ingredients.map((ingre, index) => {
-                                const { text, weight, foodCategory } = ingre;
+                            Object.values(ingre.totalNutrients).map((item, index) => {
+                                const { label, quantity, unit } = item;
                                 return (
-                                    <li key={index} >
-                                        < ul className="ingrediens-line">
-                                            <li>{text}</li>
-                                            <li id="weight">{weight.toFixed(2)} g</li>
-                                            <li id="cat">{foodCategory}</li>
+                                    <li key={index}>
+                                        <ul className="ingrediens-line">
+                                            <li>{label}</li>
+                                            <li id="weight">{quantity.toFixed(2)}{unit}</li>
                                         </ul>
                                     </li>
                                 )
@@ -56,4 +49,3 @@ const Ingredients = () => {
     )
 }
 
-export default Ingredients

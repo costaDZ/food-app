@@ -1,14 +1,17 @@
 import React from 'react'
-import '../styles/navbar.css';
-import { useGlobalContext } from '../context'
+import './navbar.css';
+import { useGlobalContext } from '../../context';
+
+import { Link } from 'react-router-dom';
+
+import Slider from './slider/Slider';
+import SearchField from './searchField/SearchField';
+
 import { GoThreeBars, GoHeart, GoHome } from "react-icons/go";
 import { FaFacebook, FaGithub, FaGooglePlus, FaSistrix } from "react-icons/fa";
-import { Link } from 'react-router-dom';
-import Slider from './Slider';
-import SearchField from './SearchField';
 
 
-function Search() {
+export function Navbar() {
 
     const { toggleSlider, toggleSearch, closeSidebar } = useGlobalContext();
 
@@ -29,7 +32,7 @@ function Search() {
 
                 <Link to="/" className="logo">
                     <img
-                        src={require("../food-img/logo.png")}
+                        src={require("../../food-img/logo.png")}
                         alt="logo"
                         className="logo-img" />
                 </Link>
@@ -63,5 +66,3 @@ function Search() {
 
 
 }
-
-export default Search

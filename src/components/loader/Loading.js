@@ -1,7 +1,7 @@
 import React from 'react'
-import '../styles/loading.css'
+import './loading.css';
 
-function Loading() {
+export function Loading() {
     return (
         <div className="loader-container">
             {/* <div className="loader">
@@ -22,5 +22,3 @@ function Loading() {
         </div>
     )
 }
-
-export default Loading

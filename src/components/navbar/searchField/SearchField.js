@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import '../styles/searchField.css'
-import { useGlobalContext } from '../context'
+import './searchField.css'
+import { useGlobalContext } from '../../../context'
 import { FaTimes, FaSistrix } from "react-icons/fa";
 import { useHistory } from 'react-router-dom';
 

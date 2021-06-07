@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar'
-import '../styles/categories.css';
+
+
+import './categories.css';
 
 import { Link } from 'react-router-dom'
 
-import { useGlobalContext } from '../context';
-import NotFound from '../components/NotFound'
+import { Navbar, NotFound } from '../../components';
+
+
+import { useGlobalContext } from '../../context';
 
 
 
-function Content() {
+export function Content() {
 
     const { page, food, getIngredients, closeSidebar } = useGlobalContext();
     const [loadingCarts, setLoadingCarts] = useState(true);
@@ -102,4 +105,4 @@ function Content() {
     )
 }
 
-export default Content;
+// export default Content;

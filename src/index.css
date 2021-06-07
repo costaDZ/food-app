@@ -24,7 +24,9 @@
   --max-width: 1170px;
   --fixed-width: 620px;
 
-  --font-normal-size: 0.8em;
+  --font-normal-size: 1em;
+
+  --font-style-sec: "Balsamiq Sans", cursive;
 }
 
 /*========================*/

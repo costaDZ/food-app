@@ -18,7 +18,8 @@
 }
 
 .navbar a {
-    font-weight: 700;
+    font-weight: 400;
+    font-family: "Balsamiq Sans", cursive;
 
     text-decoration: none;
     color: var(--clr-grey-1);
@@ -77,6 +78,8 @@
     display: inline-block;
 }
 .follow-icones h4 {
+    font-family: "Balsamiq Sans", cursive;
+
     font-size: var(--font-normal-size);
 }
 .search-btn {
@@ -88,6 +91,10 @@
     text-align: center;
     outline: none;
     cursor: pointer;
+}
+
+.search-btn span {
+    font-family: "Balsamiq Sans", cursive;
 }
 
 .navbar ul li:hover,
@@ -99,83 +106,6 @@
     color: var(--clr-black);
 }
 
-/* .navbar,
-.log-list,
-.follow-icones,
-.follow-section {
-    display: flex;
-    justify-content: space-evenly;
-    flex: 1;
-    align-items: center;
-    height: 10vh;
-}
-
-.slider-section {
-    display: flex;
-    justify-content: space-evenly;
-    flex: 1;
-    padding-left: 1em;
-}
-
-.navbar ul {
-    list-style: none;
-    color: var(--clr-grey-1);
-}
-.navbar a {
-    color: var(--clr-grey-1);
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 0.8em;
-} */
-/* .slider-section,
-.follow-section {
-    margin: 0 1em;
-} */
-/* .log-list,
-.follow-icones {
-    flex: 1;
-}
-
-.logo-img {
-    height: 1.5em;
-}
-
-.follow-icones a {
-    color: var(--clr-red-1);
-    font-size: 1em;
-}
-.follow-icones h4 {
-    font-size: var(--font-normal-size);
-}
-.slider-btn {
-    color: var(--clr-grey-1);
-    font-size: 1em;
-    outline: none;
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-.search-btn {
-    color: var(--clr-grey-1);
-    font-weight: 700;
-    font-size: 0.8em;
-    width: 7em;
-    background: transparent;
-    border: none;
-    text-align: center;
-    outline: none;
-    cursor: pointer;
-}
-
-.navbar ul li:hover,
-.navbar a:hover,
-.search-btn:hover,
-.slider-btn:hover {
-    transition: var(--transition);
-    color: var(--clr-grey-1);
-}
-*/
 @media (max-width: 1100px) {
     .follow-icones {
         display: none;
@@ -197,18 +127,9 @@
     .follow-section {
         margin: 0;
     }
-}
-
-@media (max-width: 376px) {
-    /* .slider-btn {
-        font-size: 2em;
-    }
     .logo-img {
-        height: 1.5em;
+        height: 1.2em;
     }
-    .search-btn {
-        font-size: 0.8em;
-    } */
 }
 
 /*========================*/

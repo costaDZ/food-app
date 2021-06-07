@@ -9,12 +9,9 @@ import NotFound from '../components/NotFound'
 
 
 
-
-
 function Content() {
 
     const { page, food, getIngredients, closeSidebar } = useGlobalContext();
-
     const [loadingCarts, setLoadingCarts] = useState(true);
 
 

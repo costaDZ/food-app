@@ -43,7 +43,7 @@
 }
 .slider-btn {
     color: var(--clr-grey-1);
-    font-size: 1.2em;
+    font-size: 1.5em;
     outline: none;
     border: none;
     background: transparent;
@@ -129,6 +129,11 @@
     }
     .logo-img {
         height: 1.2em;
+    }
+
+    .slider-btn,
+    .search-btn svg {
+        font-size: 1.8em;
     }
 }
 

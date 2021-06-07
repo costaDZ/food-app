@@ -12,10 +12,6 @@ import Nutrition from './pages/Nutrition';
 
 function App() {
 
-  // const {page} = useGlobalContext();
-
-  // console.log(page);
-
   return (
     <Router>
       <Switch>
